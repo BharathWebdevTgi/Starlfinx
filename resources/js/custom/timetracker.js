@@ -215,17 +215,20 @@
 			let projectId   = $('#projectFilter').val();
 
 			if (!isValidTime(startTime)) {
-				$('#start_time_error').text("Start time must be in HH:MM format");
+				//$('#start_time_error').text("Start time must be in HH:MM format");
+				p.error("Start time must be in HH:MM format");
 				return false;
 			}
 
 			if (!isValidTime(endTime)) {
-				$('#end_time_error').text("End time must be in HH:MM format");
+				//$('#end_time_error').text("End time must be in HH:MM format");
+				p.error("End time must be in HH:MM format");
 				return false;
 			}
 
 			if (startTime >= endTime) {
-				$('#start_time_error').text("Start time must be less than End time");
+				//$('#start_time_error').text("Start time must be less than End time");
+				p.error("Start time must be less than End time");
 				return false;
 			}
 			
@@ -234,7 +237,8 @@
 			let diffHours = moment.duration(end.diff(start)).asHours();
 
 			if (diffHours > 10) {
-				$('#start_time_error').text("Individual task should not exceeds 10 hours");
+				//$('#start_time_error').text("Individual task should not exceeds 10 hours");
+				p.error("Individual task should not exceeds 10 hours");
 				return false;
 			}				
 			
