@@ -41,6 +41,7 @@ $(document).ready(function () {
 		$('#add_leave')[0].reset();
 		flatpickr("#start_date").clear();
 		flatpickr("#end_date").clear();
+		$('#descriptionCount').text(0);
 		
 	});	
 	
