@@ -171,7 +171,7 @@
 							<div data-i18n="Timetracks">Timetracks</div>
 						</a>
 					</li>
-					<li class="menu-item  <?php if (request()->segment(1) == 'leave') {
+					<li class="menu-item  <?php if (request()->segment(1) == 'leaves') {
 						echo 'active';
 					} ?>">
 						<a href="{{ route('leave.index') }}" class="menu-link">
